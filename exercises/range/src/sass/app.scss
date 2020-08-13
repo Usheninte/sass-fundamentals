@@ -2,5 +2,66 @@
 @import '_mixins';
 
 input[type="range"] {
-  // Add your styles here
+  @include webkit-appearance();
+  margin: 18px 0;
+  width: $full-width;
+
+  &:focus {
+    outline: none;
+
+    &::-webkit-slider-runnable-track {
+      @include background(#367ebd);
+    }
+
+    &::-ms-fill-lower {
+      @include background(#3071a9);
+    }
+
+    &::-ms-fill-upper {
+      @include background(#367ebd);
+    }
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include range-track();
+  }
+
+  &::-webkit-slider-thumb {
+    @include range-thumb();
+    @include webkit-appearance();
+    margin-top: -14px;
+  }
+
+  &::-moz-range-track {
+    @include range-track();
+  }
+
+  &::-moz-range-thumb {
+    @include range-thumb();
+  }
+
+  &::-ms-track {
+    width: $full-width;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+
+  &::-ms-fill-lower {
+    @include background(#2a6495);
+    @include filler();
+  }
+
+  &::-ms-fill-upper {
+    @include background(#3071a9);
+    @include filler();
+  }
+
+  &::-ms-thumb {
+    @include range-thumb();
+  }
+
 }
