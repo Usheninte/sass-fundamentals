@@ -16,13 +16,55 @@
 }
 
 .theme-1 {
-  @include theme(#399, 100deg);
+  & .btn.btn-primary {
+    @include theme(#399, 100deg);
+  }
+
+  & .btn.btn-secondary {
+    @include theme(#3c4d1a, 100deg);
+  }
+
+  & .btn.btn-other {
+    @include theme(#3c1a4d, 100deg);
+  }
+
+  & .btn.btn-other2 {
+    @include theme(#4d1a1a, 100deg);
+  }
 }
 
 .theme-2 {
-  @include theme(#609, $darkenpct: 10%);
+  & .btn.btn-primary {
+    @include theme(#609, $darkenpct: 10%);
+  }
+
+  & .btn.btn-secondary {
+    @include theme(#064, $darkenpct: 10%);
+  }
+
+  & .btn.btn-other {
+    @include theme(#640, $darkenpct: 10%);
+  }
+
+  & .btn.btn-other2 {
+    @include theme(#260, $darkenpct: 10%);
+  }
 }
 
 .theme-3 {
-  @include theme($hopbush);
+  & .btn.btn-primary {
+    @include theme($hopbush);
+  }
+
+  & .btn.btn-secondary {
+    @include theme(#369);
+  }
+
+  & .btn.btn-other {
+    @include theme(#693);
+  }
+
+  & .btn.btn-other2 {
+    @include theme(#396);
+  }
 }
